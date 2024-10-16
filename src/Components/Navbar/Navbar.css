@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 40px;
+  background-color: #fff;
+  border-bottom: 2px solid #000080; /* Dark blue border */
+}
+
+.logo {
+  width: 80px;
+  height: 90px;
+  margin-right: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-text {
+  color: #000080; /* Dark blue */
+  font-size: 28px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%; /* Adjust to control link spacing */
+}
+
+.nav-links a {
+  text-decoration: none;
+  /* color: #000080; */
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 15px;
+  position: relative;
+}
+
+/* Add cursive lines between buttons */
+.nav-links a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 70px; /* Adjust spacing */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 10px;
+  border-left: 1px solid #000080;
+  border-right: 1px solid transparent;
+  border-radius: 20%;
+}
+
+.nav-links a:hover {
+  color: #333;
+  border-bottom: 2px solid #000080; /* Underline on hover */
+}
+
+.contact-btn {
+  background-color: #000080;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+  }
+
+  .contact-btn {
+    margin-top: 10px;
+  }
+  .search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: black;
+    margin-left: 20px; /* Adjust space between the About link and the search icon */
+  }
+  
+  .search-icon svg {
+    font-size: 24px; /* Adjust the size of the icon if needed */
+    color: #000080; /* Set the icon color */
+  }
+  
+}
